@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>券商托管外包业务微信公众号发文分析报告 — 2026年7月</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .report-container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .report-header {
+            background: linear-gradient(135deg, #1a3a6b 0%, #2d5aa0 100%);
+            color: #fff;
+            padding: 40px 48px;
+        }
+        .report-header .report-type {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 4px 16px;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+        .report-header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+        .report-header .date-range { font-size: 15px; opacity: 0.85; }
+        .report-header .generate-time { font-size: 12px; opacity: 0.6; margin-top: 16px; }
+
+        .summary-stats {
+            display: flex;
+            padding: 28px 48px;
+            gap: 24px;
+            border-bottom: 1px solid #eee;
+        }
+        .stat-card {
+            flex: 1;
+            text-align: center;
+            padding: 16px 12px;
+            background: #f8faff;
+            border-radius: 8px;
+            border: 1px solid #e8edf5;
+        }
+        .stat-card .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a3a6b;
+            line-height: 1.2;
+        }
+        .stat-card .stat-label { font-size: 13px; color: #888; margin-top: 6px; }
+        .stat-card.accent .stat-value { color: #c0392b; }
+
+        .section { padding: 32px 48px; border-bottom: 1px solid #f0f0f0; }
+        .section:last-child { border-bottom: none; }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a3a6b;
+            margin-bottom: 20px;
+            padding-left: 14px;
+            border-left: 4px solid #c0392b;
+        }
+        .section-subtitle {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d5aa0;
+            margin: 20px 0 12px;
+        }
+
+        .article-list { display: flex; flex-direction: column; gap: 16px; }
+        .article-card {
+            padding: 18px 22px;
+            background: #fafbfc;
+            border-radius: 8px;
+            border-left: 3px solid #2d5aa0;
+            transition: box-shadow 0.2s;
+        }
+        .article-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .article-card .article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        .article-card .article-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a3a6b;
+            flex: 1;
+        }
+        .article-card .article-source {
+            font-size: 12px;
+            color: #c0392b;
+            background: #fdf2f0;
+            padding: 2px 10px;
+            border-radius: 12px;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+        .article-card .article-date {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 6px;
+        }
+        .article-card .article-summary { font-size: 14px; color: #555; line-height: 1.7; }
+        .article-card .article-tags { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+        .article-card .article-tag {
+            font-size: 11px;
+            color: #2d5aa0;
+            background: #eef3fb;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .dimension-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .dimension-card {
+            padding: 20px;
+            background: #fafbfc;
+            border-radius: 8px;
+            border: 1px solid #eef0f3;
+        }
+        .dimension-card .dim-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .dim-icon.d1 { background: #2d5aa0; }
+        .dim-icon.d2 { background: #c0392b; }
+        .dim-icon.d3 { background: #27ae60; }
+        .dim-icon.d4 { background: #e67e22; }
+        .dimension-card .dim-title { font-size: 15px; font-weight: 600; color: #333; margin-bottom: 8px; }
+        .dimension-card .dim-content { font-size: 13px; color: #666; line-height: 1.7; }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        .comparison-table th {
+            background: #1a3a6b;
+            color: #fff;
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .comparison-table th:first-child { border-radius: 6px 0 0 0; }
+        .comparison-table th:last-child { border-radius: 0 6px 0 0; }
+        .comparison-table td { padding: 11px 14px; border-bottom: 1px solid #eee; color: #555; }
+        .comparison-table tr:hover td { background: #f8faff; }
+        .comparison-table .broker-name { font-weight: 600; color: #1a3a6b; }
+
+        .trend-box {
+            padding: 20px 24px;
+            background: linear-gradient(135deg, #f8faff 0%, #fdf2f0 100%);
+            border-radius: 8px;
+            border: 1px solid #e8edf5;
+        }
+        .trend-box p { font-size: 14px; color: #444; margin-bottom: 10px; }
+        .trend-box p:last-child { margin-bottom: 0; }
+        .trend-box .highlight { color: #c0392b; font-weight: 600; }
+
+        .ranking-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .ranking-bar .rank-num {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a3a6b;
+            width: 24px;
+        }
+        .ranking-bar .rank-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            width: 90px;
+            white-space: nowrap;
+        }
+        .ranking-bar .rank-bar-bg {
+            flex: 1;
+            height: 22px;
+            background: #eef0f3;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .ranking-bar .rank-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2d5aa0, #4a7fc5);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8px;
+            font-size: 11px;
+            color: #fff;
+            font-weight: 600;
+        }
+        .ranking-bar .rank-bar-fill.accent {
+            background: linear-gradient(90deg, #c0392b, #e74c3c);
+        }
+
+        .report-footer {
+            padding: 24px 48px;
+            background: #f8f9fb;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .summary-stats { flex-direction: column; padding: 20px; gap: 12px; }
+            .dimension-grid { grid-template-columns: 1fr; }
+            .section { padding: 20px; }
+            .report-header { padding: 28px 20px; }
+            .comparison-table { font-size: 12px; }
+            .comparison-table th, .comparison-table td { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <!-- Header -->
+        <div class="report-header">
+            <span class="report-type">月度报告</span>
+            <h1>券商托管外包业务微信公众号发文分析报告</h1>
+            <div class="date-range">统计周期：2026年6月13日 ~ 2026年7月13日</div>
+            <div class="generate-time">报告生成时间：2026年7月13日 14:22</div>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="summary-stats">
+            <div class="stat-card">
+                <div class="stat-value">22</div>
+                <div class="stat-label">发文总量（篇）</div>
+            </div>
+            <div class="stat-card accent">
+                <div class="stat-value">14</div>
+                <div class="stat-label">涉及券商（家）</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">6</div>
+                <div class="stat-label">热点话题（个）</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">1.6</div>
+                <div class="stat-label">券商均发文（篇）</div>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <div class="section">
+            <div class="section-title">本期概览</div>
+            <div class="trend-box">
+                <p>2026年6月中旬至7月中旬，券商托管外包业务领域迎来<strong>政策密集期与半年报窗口期</strong>的双重叠加。国务院办公厅发布私募基金高质量发展指导意见（54号文），首次在国务院层面提出"强制托管"表述，中基协同步发布《私募投资基金信息披露实施细则》，将于9月1日正式施行，标志着私募托管行业进入"全口径强制托管+穿透式披露"新纪元。</p>
+                <p>市场格局方面，<strong>国泰海通以2126只新增托管产品（26.62%市场份额）断层领跑上半年私募托管市场</strong>，中信证券（1450只，18.15%）、招商证券（965只，12.08%）、华泰证券（703只，8.80%）紧随其后，头部集中效应进一步加剧。招商证券托管外包总规模达4.28万亿元，同比增长23.72%，境外基金行政外包业务同比增长201.50%，跨境服务成为重要增长极。</p>
+                <p>科技赋能方面，<strong>信创改造进入规模化交付阶段</strong>，国元证券启动托管核心系统信创改造招标，华福证券率先实现托管核心系统6.5版全栈信创单轨运行，金证股份公募基金全栈信创云方案首家落地。同时，AI大模型在托管业务中的应用持续深化，华泰证券预告7月19日WAIC 2026"智启新金融"论坛，国泰海通将在WAIC展示"1+N"大模型应用架构，行业数字化竞争进入新阶段。</p>
+            </div>
+        </div>
+
+        <!-- Article Highlights -->
+        <div class="section">
+            <div class="section-title">重点文章摘要</div>
+            <div class="article-list">
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">国务院办公厅关于加强监管防范风险促进私募投资基金高质量发展的指导意见</div>
+                        <div class="article-source">行业政策</div>
+                    </div>
+                    <div class="article-date">2026-06-05 · 来源：证监会/证券时报</div>
+                    <div class="article-summary">国办印发54号文，作为私募基金领域"1+N+X"政策制度体系的纲领性文件。首次在国务院层面使用"强制托管"表述，托管制度从"原则性要求"升级为"强制性义务"。同时要求建立私募基金风险集中监测平台，构建穿透式数据监测体系。证监会将制定落实三年行动方案。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">监管政策</span>
+                        <span class="article-tag">强制托管</span>
+                        <span class="article-tag">穿透披露</span>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">中基协发布《私募投资基金信息披露实施细则》及六份配套模板</div>
+                        <div class="article-source">行业政策</div>
+                    </div>
+                    <div class="article-date">2026-06-05 · 来源：中基协/兰台律师事务所</div>
+                    <div class="article-summary">中基协正式发布信披细则，与证监会《信披办法》（233号令）同步于2026年9月1日起施行，2016版信披办法同步废止。细则标志着私募信披迈入"精细化、定量化、穿透化"新纪元，对披露主体、披露标准、穿透核查及法律责任进行了系统性重塑，强制审计门槛收紧，托管机构监督责任显著加重。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">信披新规</span>
+                        <span class="article-tag">穿透披露</span>
+                        <span class="article-tag">9月1日施行</span>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">国泰海通上半年私募增量第一，大客户曝光！覆盖835家私募机构</div>
+                        <div class="article-source">国泰海通</div>
+                    </div>
+                    <div class="article-date">2026-07-06 · 来源：同花顺/挖基哥</div>
+                    <div class="article-summary">2026上半年全市场新增备案私募证券基金7987只，国泰海通以2126只（26.62%）断层领先，覆盖835家私募机构，增量主要来自明汯投资、顽岩资产、正定投资、世纪前沿、微观博易、上海宽德等百亿量化私募。中信证券（1450只，18.15%）、招商证券（965只，12.08%）、华泰证券（703只，8.80%）分列二至四位。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">规模排名</span>
+                        <span class="article-tag">市场趋势</span>
+                        <span class="article-tag">量化私募</span>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">华福证券四度蝉联"优秀私募托管成长券商"，托管规模超600亿</div>
+                        <div class="article-source">华福证券</div>
+                    </div>
+                    <div class="article-date">2026-06-02 · 来源：中国基金报/同花顺</div>
+                    <div class="article-summary">华福证券第四次荣获"优秀私募托管成长券商"奖项。截至2025年末，托管规模超600亿元，为近800家私募管理人提供服务，公募托管规模近百亿。率先实现新一代托管核心系统6.5版全栈信创单轨稳定运行，搭建"123N"智慧托管AI赋能体系，上线"华智"托管协议核验小程序，自主研发20项自动化运营功能，四项获软件著作权。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">获奖</span>
+                        <span class="article-tag">信创</span>
+                        <span class="article-tag">AI赋能</span>
+                        <span class="article-tag">系统上线</span>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">华泰证券X WAIC 2026：周志华院士领衔，探索AI如何重塑金融新未来</div>
+                        <div class="article-source">华泰证券</div>
+                    </div>
+                    <div class="article-date">2026-07-13 · 来源：同花顺</div>
+                    <div class="article-summary">华泰证券预告7月19日在2026世界人工智能大会举办"智启新金融：全球视野下的AI转型之路"科技金融创新论坛。作为证券业科技先行者，华泰从底层架构到业务中台、前端应用系统探索AI重塑业务架构。托管外包方面，"行知"平台持续更新私募合规洞察、运营日历、策略分析报告等内容，INCOS平台服务私募客户超2000家。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">AI大模型</span>
+                        <span class="article-tag">科技赋能</span>
+                        <span class="article-tag">品牌活动</span>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">国泰海通首度亮相WAIC 2026："1+N"大模型应用架构全景展示</div>
+                        <div class="article-source">国泰海通</div>
+                    </div>
+                    <div class="article-date">2026-07 · 来源：证券时报</div>
+                    <div class="article-summary">国泰海通将在7月17-20日WAIC展厅集中展示"1+N"大模型应用架构——"1"为统一金融AI能力底座，"N"覆盖财富管理、机构服务、企业服务、投研交易、运营管理等多元场景的智能应用矩阵。重点呈现LingxiGraph自研架构、双模型协同、高性能金融取数、智能体生态、灵犀Claw及可信安全体系等能力。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">AI大模型</span>
+                        <span class="article-tag">系统平台</span>
+                        <span class="article-tag">科技赋能</span>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">招商证券托管外包年报数据：规模4.28万亿，境外业务同比增201.50%</div>
+                        <div class="article-source">招商证券</div>
+                    </div>
+                    <div class="article-date">2026-07-03 · 来源：今日头条/同花顺</div>
+                    <div class="article-summary">截至2025年末，招商证券托管外包产品3.37万只，总规模4.28万亿元，同比增长23.72%。境外基金行政管理外包业务规模225.79亿港元，同比增长201.50%；私募基金托管产品数量市场份额21.24%。公司深度应用AI大模型技术构建"合规、高效、智能"服务体系，业内首批落地保险资金-私募MOM模式。原托管负责人易卫东回归总部任机构部负责人。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">规模数据</span>
+                        <span class="article-tag">跨境托管</span>
+                        <span class="article-tag">AI应用</span>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">私募托管不再"躺平"：上海金融法院判例划定托管人责任红线</div>
+                        <div class="article-source">行业动态</div>
+                    </div>
+                    <div class="article-date">2026-06-28 · 来源：东方财富/上海源泰律师事务所</div>
+                    <div class="article-summary">上海金融法院一则经典判例明确：托管机构不能只做纸面审查，面对项目异常情形必须开展实质性核查，"托而不管"需承担赔偿责任。在一起百亿票据私募爆雷案中，托管券商被判对投资者本金损失承担10%的赔偿责任。此判例对托管机构尽职履责标准产生深远影响，各券商托管部纷纷加强投后监督与风险识别机制。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">托管责任</span>
+                        <span class="article-tag">司法判例</span>
+                        <span class="article-tag">风险防控</span>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">国元证券启动托管部核心业务系统信创改造项目，预算350万元</div>
+                        <div class="article-source">国元证券</div>
+                    </div>
+                    <div class="article-date">2026-06-26 · 来源：优智采招标平台</div>
+                    <div class="article-summary">国元证券就托管部核心业务系统信创改造项目（应用软件部分）公开招标，预算350万元，对现有托管估值、投资监督、信息披露、统一报送服务四套核心系统进行全面信创改造。要求合同签订后5个月内完成开发、测试、部署调试及全流程培训。反映中小券商也在加速推进托管系统信创化进程。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">信创改造</span>
+                        <span class="article-tag">系统升级</span>
+                        <span class="article-tag">中小券商</span>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">中基协督促私募管理人合规运作，下发两份自查通知</div>
+                        <div class="article-source">中基协</div>
+                    </div>
+                    <div class="article-date">2026-07-10 · 来源：证券时报/今日头条</div>
+                    <div class="article-summary">7月7日，中基协向私募管理人下发《关于督促提醒私募管理人合规运作的通知》和《关于督促私募证券基金管理人推进〈运作指引〉过渡期整改工作的通知》，要求管理人就AMBERS系统填报一致性、专职员工不少于5人、高管配置、重大事项变更报送等开展自查自纠，提交新基金备案时需提供相关资料。未按要求整改将面临公示、暂停备案乃至注销登记等自律处分。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">合规自查</span>
+                        <span class="article-tag">监管动态</span>
+                        <span class="article-tag">过渡期整改</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Broker Ranking -->
+        <div class="section">
+            <div class="section-title">券商发文量排名</div>
+            <div class="ranking-bar">
+                <div class="rank-num">1</div>
+                <div class="rank-name">国泰海通</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill accent" style="width: 100%">5篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">2</div>
+                <div class="rank-name">华泰证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">3篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">3</div>
+                <div class="rank-name">招商证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">3篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">4</div>
+                <div class="rank-name">华福证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">5</div>
+                <div class="rank-name">申万宏源</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">6</div>
+                <div class="rank-name">银河证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 20%">1篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">7</div>
+                <div class="rank-name">兴业证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 20%">1篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">8</div>
+                <div class="rank-name">国元证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 20%">1篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">9</div>
+                <div class="rank-name">中泰证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 20%">1篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">10</div>
+                <div class="rank-name">国信证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 20%">1篇</div></div>
+            </div>
+        </div>
+
+        <!-- Dimension Analysis -->
+        <div class="section">
+            <div class="section-title">四大维度分析</div>
+            <div class="dimension-grid">
+                <div class="dimension-card">
+                    <div class="dim-icon d1">P</div>
+                    <div class="dim-title">产品与服务介绍</div>
+                    <div class="dim-content">
+                        本期多家券商集中展示托管外包服务能力升级。<strong>华泰证券</strong>"行知"平台持续更新私募合规洞察月报、运营日历、策略分析报告，INCOS平台服务私募客户超2000家，推出行知电子签-托管外包场景签署全景图；<strong>招商证券</strong>托管外包总规模4.28万亿元，境外基金行政外包业务同比增长201.50%，"CMS Partner+"跨境品牌持续发力；<strong>银河证券</strong>托管业务页面更新信息披露公告，线上化平台提供导航式开放日历、直通式划款扣费、自助式报表下载等功能；<strong>兴业证券</strong>私募托管产品存量稳居行业前六，获"英华奖-最佳私募托管券商"等多项奖项。
+                    </div>
+                </div>
+                <div class="dimension-card">
+                    <div class="dim-icon d2">M</div>
+                    <div class="dim-title">市场趋势与政策</div>
+                    <div class="dim-content">
+                        本期政策层面迎来历史性变化：<strong>国办54号文</strong>首次提出"强制托管"，中基协<strong>信披细则</strong>9月1日施行，私募行业进入"全口径强制托管+穿透式披露"新阶段。<strong>上海金融法院判例</strong>明确托管人实质核查义务，"托而不管"需承担赔偿责任。<strong>中基协</strong>7月7日下发两份合规自查通知，要求私募管理人限期整改。市场层面，上半年私募新增托管7987只，国泰海通以26.62%份额断层领跑，头部集中度持续提升。跨境投资合规化推进，QDII额度紧俏，约2000-2500亿港元资金回归主流合规路径。
+                    </div>
+                </div>
+                <div class="dimension-card">
+                    <div class="dim-icon d3">B</div>
+                    <div class="dim-title">业务条线对比</div>
+                    <div class="dim-content">
+                        <strong>私募托管</strong>仍是券商核心战场，上半年新增备案7987只，券商托管占比超98%，银行近乎退出。<strong>公募托管</strong>方面，华福证券公募托管规模近百亿取得突破，华泰证券资管公募规模超2000亿元成为行业第二。<strong>跨境业务</strong>成为重要增长极，招商证券境外基金行政外包规模225.79亿港元（+201.50%），跨境ETF一级交易商名单持续扩容。<strong>信创托管</strong>成为新赛道，申万宏源"申享"平台行业首家信创版上线，华福证券实现6.5版全栈信创单轨运行，国元证券启动核心系统信创改造。<strong>中泰证券</strong>"尚元杯"私募优选活动覆盖五大策略11个细分方向，评选体系持续完善。
+                    </div>
+                </div>
+                <div class="dimension-card">
+                    <div class="dim-icon d4">O</div>
+                    <div class="dim-title">运营策略分析</div>
+                    <div class="dim-content">
+                        <strong>国泰海通</strong>在合并重组后托管资源深度整合，WAIC亮相展示科技实力，品牌曝光度行业领先。<strong>华泰证券</strong>"行知"平台内容运营体系成熟，定期发布合规洞察、运营日历、策略报告形成内容矩阵，预告WAIC论坛吸引行业关注。<strong>华福证券</strong>以"四度蝉联"奖项强化品牌认知，"123N"智慧托管AI体系和"华智"小程序打造差异化标签。<strong>申万宏源</strong>"申享"平台以"行业首发信创"为品牌定位，六大突破性亮点构建差异化叙事。整体来看，券商托管公众号运营正从"产品宣传"向"<strong>智库服务+品牌IP化</strong>"转型，定期专栏化内容输出成为头部券商共识。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="section">
+            <div class="section-title">头部券商竞争动态</div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>券商名称</th>
+                        <th>发文量</th>
+                        <th>主要话题</th>
+                        <th>内容亮点</th>
+                        <th>运营特点</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="broker-name">国泰海通</td>
+                        <td>5篇</td>
+                        <td>私募托管排名第一、WAIC大模型展示、合并整合成效</td>
+                        <td>上半年2126只新增托管（26.62%），覆盖835家私募，"1+N"大模型架构将在WAIC亮相</td>
+                        <td>合并后品牌曝光激增，科技+规模双线叙事</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">华泰证券</td>
+                        <td>3篇</td>
+                        <td>WAIC AI论坛预告、行知平台内容更新、年报数据</td>
+                        <td>INCOS服务私募超2000家，行知平台合规洞察/运营日历/策略报告定期专栏，预告WAIC院士级论坛</td>
+                        <td>内容矩阵化运营，定期专栏输出形成品牌IP</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">招商证券</td>
+                        <td>3篇</td>
+                        <td>年报规模数据、跨境业务、人事变动</td>
+                        <td>4.28万亿规模（+23.72%），境外外包+201.50%，AI大模型深度应用，"托管007"数字员工</td>
+                        <td>数据驱动叙事，跨境业务差异化定位</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">华福证券</td>
+                        <td>2篇</td>
+                        <td>四度蝉联奖项、信创系统、AI赋能体系</td>
+                        <td>托管规模超600亿，6.5版全栈信创单轨运行，"123N"AI体系，"华智"小程序</td>
+                        <td>中小券商特色发展标杆，信创+AI双引擎</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">申万宏源</td>
+                        <td>2篇</td>
+                        <td>申享平台信创上线、托管市值5.47万亿</td>
+                        <td>行业首家信创版托管运营平台，微服务架构+统一数据中台+开放API+AI融合</td>
+                        <td>信创先行者品牌定位，技术突破驱动叙事</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">银河证券</td>
+                        <td>1篇</td>
+                        <td>托管业务页面更新、IT基础设施采购</td>
+                        <td>线上化智能化全周期服务平台，信息披露公告持续更新，2026年IT基础设施集中采购</td>
+                        <td>平台化服务展示，基础设施投入加大</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">兴业证券</td>
+                        <td>1篇</td>
+                        <td>私募托管行业前六、英华奖</td>
+                        <td>首批托管外包双资质券商，私募托管存量稳居行业前六，获多项权威奖项</td>
+                        <td>奖项背书+规模定位，稳健型叙事</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">国元证券</td>
+                        <td>1篇</td>
+                        <td>托管核心系统信创改造招标</td>
+                        <td>350万元预算改造估值、投资监督、信披、统一报送四套核心系统</td>
+                        <td>中小券商信创加速，招标信息公开</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Trend Forecast -->
+        <div class="section">
+            <div class="section-title">趋势研判与关注提示</div>
+            <div class="trend-box">
+                <p><strong>趋势一：强制托管新纪元开启。</strong>国办54号文与中基协信披细则将于9月1日同步施行，"全口径强制托管+穿透式披露"将重塑行业生态。此前采用单募集监督不托管的股权创投基金面临备案受阻风险，托管机构监督责任实质性加重。预计三季度各券商托管部将密集发布合规解读文章和应对指南，托管业务合规主题将成为下月发文热点。</p>
+                <p><strong>趋势二：信创改造进入攻坚期。</strong>随着2027年信创合规节点临近，托管系统信创改造从"样板试点"进入规模化交付。国元证券等中小券商加速跟进，申万宏源、华福证券的先行案例为行业提供可复制路径。预计下半年将有更多券商发布托管系统信创改造进展。</p>
+                <p><strong>趋势三：AI大模型从展示走向落地。</strong>WAIC 2026（7月17-20日）将成为券商AI能力集中展示窗口，华泰证券、国泰海通的AI实践具有重要风向标意义。预计三季度AI在托管估值、投资监督、合规审查等场景的落地应用将加速推进。</p>
+                <p><strong>趋势四：头部集中效应持续加剧。</strong>国泰海通合并后"赢者通吃"效应显著，上半年CR5超70%。中小券商需通过差异化定位（如华福信创+AI、申万宏源信创平台）寻找细分突破点。</p>
+                <p><span class="highlight">下期关注：</span>① WAIC 2026华泰/国泰海通AI论坛成果及行业反响；② 9月1日信披细则施行前各券商合规解读密集发布情况；③ 各券商托管半年报数据披露；④ 强制托管新规对股权创投基金托管格局的影响；⑤ 跨境投资合规化推进对QDII托管业务的拉动效应。</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="report-footer">
+            本报告由券商托管外包业务发文分析技能自动生成 | 数据来源：微信公众号公开文章及网络公开信息<br>
+            统计周期：2026年6月13日 ~ 2026年7月13日 | 报告生成时间：2026年7月13日
+        </div>
+    </div>
+</body>
+</html>
