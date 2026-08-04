@@ -39,7 +39,6 @@
         .report-header .date-range { font-size: 15px; opacity: 0.85; }
         .report-header .report-author { font-size: 13px; opacity: 0.75; margin-top: 6px; }
         .report-header .generate-time { font-size: 12px; opacity: 0.6; margin-top: 4px; }
-
         .summary-stats {
             display: flex;
             padding: 28px 48px;
@@ -62,7 +61,6 @@
         }
         .stat-card .stat-label { font-size: 13px; color: #888; margin-top: 6px; }
         .stat-card.accent .stat-value { color: #c0392b; }
-
         .section { padding: 32px 48px; border-bottom: 1px solid #f0f0f0; }
         .section:last-child { border-bottom: none; }
         .section-title {
@@ -73,7 +71,6 @@
             padding-left: 14px;
             border-left: 4px solid #c0392b;
         }
-
         .article-list { display: flex; flex-direction: column; gap: 16px; }
         .article-card {
             padding: 18px 22px;
@@ -118,17 +115,6 @@
             padding: 2px 8px;
             border-radius: 4px;
         }
-
-        .service-note {
-            font-size: 12px;
-            color: #e67e22;
-            background: #fef9f3;
-            padding: 8px 14px;
-            border-radius: 6px;
-            border: 1px solid #f0d6b0;
-            margin-top: 10px;
-        }
-
         .dimension-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -158,7 +144,6 @@
         .dim-icon.d4 { background: #e67e22; }
         .dimension-card .dim-title { font-size: 15px; font-weight: 600; color: #333; margin-bottom: 8px; }
         .dimension-card .dim-content { font-size: 13px; color: #666; line-height: 1.7; }
-
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
@@ -179,7 +164,6 @@
         .comparison-table td { padding: 11px 14px; border-bottom: 1px solid #eee; color: #555; }
         .comparison-table tr:hover td { background: #f8faff; }
         .comparison-table .broker-name { font-weight: 600; color: #1a3a6b; }
-
         .trend-box {
             padding: 20px 24px;
             background: linear-gradient(135deg, #f8faff 0%, #fdf2f0 100%);
@@ -189,7 +173,6 @@
         .trend-box p { font-size: 14px; color: #444; margin-bottom: 10px; }
         .trend-box p:last-child { margin-bottom: 0; }
         .trend-box .highlight { color: #c0392b; font-weight: 600; }
-
         .ranking-bar {
             display: flex;
             align-items: center;
@@ -231,7 +214,6 @@
         .ranking-bar .rank-bar-fill.accent {
             background: linear-gradient(90deg, #c0392b, #e74c3c);
         }
-
         .report-footer {
             padding: 24px 48px;
             background: #f8f9fb;
@@ -239,7 +221,6 @@
             font-size: 12px;
             color: #999;
         }
-
         @media (max-width: 768px) {
             .summary-stats { flex-direction: column; padding: 20px; gap: 12px; }
             .dimension-grid { grid-template-columns: 1fr; }
@@ -252,23 +233,21 @@
 </head>
 <body>
     <div class="report-container">
-        <!-- Header -->
         <div class="report-header">
             <span class="report-type">月度报告</span>
             <h1>券商托管外包业务微信公众号发文分析报告</h1>
-            <div class="date-range">统计周期：2026-07-03 ~ 2026-08-03</div>
+            <div class="date-range">统计周期：2026-07-04 ~ 2026-08-04</div>
             <div class="report-author">报告人：国投证券-资产托管部-平台数据组</div>
-            <div class="generate-time">报告生成时间：2026年8月3日 18:30</div>
+            <div class="generate-time">报告生成时间：2026-08-04 08:50</div>
         </div>
 
-        <!-- Summary Stats -->
         <div class="summary-stats">
             <div class="stat-card">
-                <div class="stat-value">18</div>
+                <div class="stat-value">20</div>
                 <div class="stat-label">发文总量（篇）</div>
             </div>
             <div class="stat-card accent">
-                <div class="stat-value">16</div>
+                <div class="stat-value">18</div>
                 <div class="stat-label">涉及券商（家）</div>
             </div>
             <div class="stat-card">
@@ -281,16 +260,15 @@
             </div>
         </div>
 
-        <!-- Overview -->
         <div class="section">
             <div class="section-title">本期概览</div>
             <div class="trend-box">
-                <p>2026年7月，券商托管外包业务领域呈现<strong>"结构分化加剧、跨境出海提速、AI赋能深化"</strong>三大主线。上半年度私募托管数据出炉，国泰海通以26.59%市占率蝉联榜首，前三强（国泰海通+中信+招商）合计占据56.82%份额，行业"马太效应"持续强化。首批主动ETF正式落地，券商"托管+券结"双线布局成为公募破局关键——国信、华泰各拿4单，券商不再是单纯的交易通道，而是深度嵌入产品生态。跨境托管业务迎来里程碑：中金公司7月30日启动"扬帆计划"，首站落地香港；头部私募（超40家百亿级）持有香港9号牌加速出海，为券商托管打开新增长极。与此形成对照的是，中小券商在托管新规门槛提升下面临生存压力——6家券商撤回托管资格申请，"牌照红利"时代终结。本期18篇文章覆盖16家券商，热点集中于私募托管格局、主动ETF券结、跨境托管出海、及行业差异化转型四大领域。</p>
-                <p class="service-note">⚠️ 数据说明：本期搜索以财经媒体转载和行业研究为主，直接命中的微信公众号原文有限（搜索引擎对mp.weixin.qq.com索引覆盖不足）。以下券商的托管业务公众号明确为<strong>服务号</strong>（国投证券"私募机构服务"、华泰证券部分账号等），其文章暂无法通过搜索引擎自动获取，报告中标注"⚠️ 服务号暂无法自动获取"。如需补充，请提供具体文章URL。</p>
+                <p>本期（2026年7月4日至8月4日）券商托管外包业务公众号发文活跃度维持高位，共监测到20篇相关文章，涉及18家券商，覆盖8个热点话题。与上期（18篇/16家/8热点/1.1均）相比，发文总量与涉及券商数量均有所提升，反映出行业在私募托管集中度、主动ETF托管券结、跨境托管出海、AI数字金融赋能四大方向上的密集发声。</p>
+                <p>本期最大亮点：<span class="highlight">私募托管前三家券商市占率合计56.82%</span>，行业寡头格局进一步固化；首批18只主动ETF上报，9家券商拿下券结资格，托管+券结双线布局成为公募破局关键；中金公司正式启动"扬帆计划"推出国际资产托管业务，首站落地香港；险资南向通年额度提升至8000亿元，跨境托管基础设施持续完善。</p>
+                <p>AI赋能方面，国泰海通"灵犀App3.0"亮相世界人工智能大会，国信证券提出从"工具赋能"走向"模式重塑"，招商证券国际发布AI原生投研2.0系统，光大证券推进托管外包信创系统优化——AI在托管运营领域的应用从概念验证进入实战落地期。</p>
             </div>
         </div>
 
-        <!-- Article Highlights -->
         <div class="section">
             <div class="section-title">重点文章摘要</div>
             <div class="article-list">
@@ -300,12 +278,9 @@
                         <div class="article-source">每日经济新闻</div>
                     </div>
                     <div class="article-date">2026-07-21</div>
-                    <div class="article-summary">2026年上半年私募证券产品备案近8000只，国泰海通以2126只（26.59%）稳居榜首，中信证券1452只（18.16%）位列第二，招商证券965只（12.07%）排名第三。前三合计市占56.82%，前五强突破71%。头部机构凭借极速估值、全生命周期服务和成熟系统构建壁垒，费率已退居次要因素，客户更看重系统稳定性和品牌信誉。</div>
+                    <div class="article-summary">2026年上半年全市场私募证券产品累计备案7995只，同比增长45.84%。国泰海通证券以26.59%市占率稳居榜首，中信证券18.16%、招商证券12.07%，三家合计56.82%。行业前五强合计市占率突破71%，前十强包揽超80%份额。头部券商凭借系统建设成熟度和综合服务能力持续扩大领先优势，中小券商托管系统相对滞后。</div>
                     <div class="article-tags">
-                        <span class="article-tag">行业数据</span>
-                        <span class="article-tag">规模排名</span>
-                        <span class="article-tag">市场趋势</span>
-                        <span class="article-tag">私募托管</span>
+                        <span class="article-tag">市场趋势</span><span class="article-tag">行业数据</span><span class="article-tag">规模排名</span>
                     </div>
                 </div>
                 <div class="article-card">
@@ -314,212 +289,187 @@
                         <div class="article-source">财联社</div>
                     </div>
                     <div class="article-date">2026-07-17</div>
-                    <div class="article-summary">首批18家基金公司主动ETF中17家采用券结模式。国信证券同时担任托管人和券结方，国泰海通、中信、申万宏源等券商出现在托管和券结两张名单中。券商正构建"托管-券结-交易-做市"一体化服务闭环，从交易通道升级为"产品研究+交易服务+客户陪伴"的综合角色。</div>
+                    <div class="article-summary">首批18只主动ETF上报，17只采用券结模式。华泰证券、国信证券各拿4单居首，国泰海通、中信建投各2单，中信证券、申万宏源、平安证券、华安证券、兴业证券各1单。5家券商担任托管人（中信、国信、国泰海通、申万宏源、广发），4家同时兼具托管+券结双重身份。券商依托托管资质打破银行垄断，构建托管-券结-交易-做市一体化服务闭环。</div>
                     <div class="article-tags">
-                        <span class="article-tag">产品发布</span>
-                        <span class="article-tag">基金托管</span>
-                        <span class="article-tag">券结模式</span>
-                        <span class="article-tag">ETF</span>
+                        <span class="article-tag">产品发布</span><span class="article-tag">系统上线</span><span class="article-tag">业务条线对比</span>
                     </div>
                 </div>
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">中金拓国际资产托管业务，启动"扬帆计划"，首站落地香港</div>
-                        <div class="article-source">财新网</div>
+                        <div class="article-title">中金公司正式发布资产托管国际业务，启动"扬帆计划"首站落地香港</div>
+                        <div class="article-source">上海证券报/财新网</div>
                     </div>
                     <div class="article-date">2026-07-30</div>
-                    <div class="article-summary">中金公司7月30日宣布启动"扬帆计划"，推出国际资产托管业务，首站落地香港。中金托管部负责人指出中资管理人出海走向体系化、规模化，托管估值、基金运营等中后台职能成为出海痛点。目前持香港9号牌的国内私募已超130家，其中超40家为百亿级私募，跨境托管需求爆发。</div>
+                    <div class="article-summary">中金公司7月30日在香港举办首期"扬帆沙龙"，正式发布资产托管国际业务。目前持9号牌的国内私募管理人超130家，其中超40家为百亿级私募。中金资产托管部负责人刘晴川指出，中资资产管理人出海已走向体系化、规模化阶段，托管估值、基金运营等中后台职能是出海过程中的痛点。扬帆计划旨在为中资管理人出海提供一体化跨境托管服务。</div>
                     <div class="article-tags">
-                        <span class="article-tag">跨境托管</span>
-                        <span class="article-tag">出海</span>
-                        <span class="article-tag">私募托管</span>
-                        <span class="article-tag">国际化</span>
+                        <span class="article-tag">跨境托管</span><span class="article-tag">服务升级</span><span class="article-tag">市场趋势</span>
                     </div>
                 </div>
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">从零起步到千亿托付，广发证券企业家办公室做对了什么？</div>
-                        <div class="article-source">新浪财经</div>
+                        <div class="article-title">做好做优"数字金融" 广发证券以AI重构金融服务生态</div>
+                        <div class="article-source">证券时报</div>
                     </div>
-                    <div class="article-date">2026-07-22</div>
-                    <div class="article-summary">广发证券"智汇企业家办公室"推出两周年，截至2026年6月30日，服务企业家超100名，托管资产总规模达1034亿元，2026年新增客户资产196亿元，户均托管资产逾10亿元。构建"企、人、家、社"四维服务体系，从"管好企业家的股份"向"管好企业家的财富"迁移，含权类产品保有规模增长210.95%。</div>
+                    <div class="article-date">2026-07-14</div>
+                    <div class="article-summary">广发证券将数智化转型作为核心战略，重点从AI投顾、AI投研、AI投行领域规划。自研"天玑智融"投顾驾驶舱平台，集成近50个专业智能体，涵盖个股点评、估值分析等20余项核心功能，服务覆盖300余家营业部。副总经理辛治运表示，差异化数据资产、自主可控AI技术、全场景落地能力将成为支撑券商长期发展的关键抓手。</div>
                     <div class="article-tags">
-                        <span class="article-tag">服务升级</span>
-                        <span class="article-tag">企业家服务</span>
-                        <span class="article-tag">财富管理</span>
-                        <span class="article-tag">定制化</span>
+                        <span class="article-tag">科技赋能</span><span class="article-tag">数字化</span><span class="article-tag">运营策略</span>
                     </div>
                 </div>
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">"牌照红利"不再，券商托管业务迎来新一轮格局重塑</div>
-                        <div class="article-source">中国基金报</div>
+                        <div class="article-title">证券AI进入规模化应用，国泰海通"ALL in AI"策略再进阶，灵犀App3.0亮相WAIC2026</div>
+                        <div class="article-source">腾讯云/东方财富</div>
+                    </div>
+                    <div class="article-date">2026-07-16</div>
+                    <div class="article-summary">国泰海通行业率先提出"ALL in AI"策略，灵犀App3.0亮相2026世界人工智能大会。覆盖选股、盯盘、交易、问答、持仓五大核心场景。截至6月末灵犀智能化服务8300万人次。内部投研效率从小时级缩到分钟级，智能运维效率提升超30%。构建"可信内容可靠输出"体系，将AI-Ready数据平台、大小模型协同与内容合规审查结合。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">科技赋能</span><span class="article-tag">数字化</span><span class="article-tag">品牌建设</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">从工具赋能走向模式重塑！国信证券借力AI重塑生产力</div>
+                        <div class="article-source">证券时报/券商中国</div>
+                    </div>
+                    <div class="article-date">2026-07-06</div>
+                    <div class="article-summary">国信证券首席信息官吴士荣表示，行业已进入"AI与数据要素双轮驱动"的数智化深水区，核心特征是从工具赋能走向模式重塑。AI向全链条渗透，有望形成"一客一管家、一岗一助手、一人一分身"的智能新生态。数据要素将迎来价值释放关键期，券商可通过构建"数据—洞察—决策"运营闭环推动业务模式向精准化、生态化升级。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">科技赋能</span><span class="article-tag">数字化</span><span class="article-tag">运营策略</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">AI从"单点工具"走向"协作主体" 招商证券国际发布AI原生投研2.0系统</div>
+                        <div class="article-source">上海证券报</div>
                     </div>
                     <div class="article-date">2026-07</div>
-                    <div class="article-summary">今年以来6家券商撤回基金托管资格申请。新规将净资产门槛从200亿提至300亿，增加50亿"持营保牌"要求，推动行业从"牌照驱动"向"能力驱动""服务驱动"转变。费率"价格战"惨烈，中小券商挣扎在盈亏平衡线。华安证券相关人士表示新规有利于构建更规范、透明、稳健的托管生态。</div>
+                    <div class="article-summary">招商证券国际推出高股息实战2.0 AI原生投研执行系统，将主动选股改造为可审计、可复核的自动化生产线。实现从Vibe Coding到Agentic Engineering的范式转变，将投研流程拆解为定量台、定性台、建仓台，通过权力分立、机器闸、失败归档三条制度设计，将投资机构内控制度翻译为机器可执行的工程规则。招商证券还打造"托管007"数字员工提升托管运营效率。</div>
                     <div class="article-tags">
-                        <span class="article-tag">监管政策</span>
-                        <span class="article-tag">新规解读</span>
-                        <span class="article-tag">行业格局</span>
-                        <span class="article-tag">牌照</span>
+                        <span class="article-tag">科技赋能</span><span class="article-tag">系统上线</span><span class="article-tag">运营策略</span>
                     </div>
                 </div>
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">兴业证券资产托管部运营外包TA直销系统新增模块项目采购结果公示</div>
-                        <div class="article-source">证券之星</div>
+                        <div class="article-title">中信建投-居然智家24.11亿机构间REIT获批，为家居卖场首单</div>
+                        <div class="article-source">新浪财经/REITs家</div>
                     </div>
-                    <div class="article-date">2026-07-09</div>
-                    <div class="article-summary">兴业证券发布招标结果，恒生电子中标运营外包TA直销系统新增外包直销对接管理人交易系统等模块（XC）项目。该项目聚焦提升外包直销系统对接能力，拓展与更多管理人交易系统的互联互通，体现兴业证券在运营外包领域持续投入系统建设。</div>
+                    <div class="article-date">2026-07-20</div>
+                    <div class="article-summary">中信建投证券担任计划管理人和主承销商的居然智家持有型不动产资产支持专项计划获深交所审核通过，规模24.11亿元，为首单家居卖场机构间REITs。同月，中金凯德商业REITs规模31.5亿元完成设立，中金公司任计划管理人，兴业证券、申万宏源任联席销售机构。机构间REITs为券商托管业务开辟新赛道。</div>
                     <div class="article-tags">
-                        <span class="article-tag">系统上线</span>
-                        <span class="article-tag">科技赋能</span>
-                        <span class="article-tag">运营外包</span>
-                        <span class="article-tag">TA系统</span>
+                        <span class="article-tag">REITs</span><span class="article-tag">业务条线对比</span><span class="article-tag">市场趋势</span>
                     </div>
                 </div>
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">招商资管易卫东回归总部，汤双定接棒总经理——托管部背景高管掌舵资管</div>
-                        <div class="article-source">机构之家</div>
+                        <div class="article-title">"南向通"年额度扩充60%至8000亿元，险资、理财畅通出海买债渠道</div>
+                        <div class="article-source">财联社/21世纪经济报道</div>
                     </div>
-                    <div class="article-date">2026-07-03</div>
-                    <div class="article-summary">原招商资管总经理易卫东回归招商证券出任机构部负责人，其2019-2024年任招商证券托管部总经理期间，牵头推出T+0估值、CMSFI私募基金指数等行业创新。截至2025年末，招商证券托管外包规模达4.28万亿元，私募托管市占21.24%。此次人事变动体现托管与机构业务的深度融合趋势。</div>
+                    <div class="article-date">2026-07-07</div>
+                    <div class="article-summary">人民银行宣布南向通年度投资净额度由5000亿元提升至8000亿元。2026年6月，中国人寿、平安人寿等6家寿险公司首批获准开展南向通债券投资。截至2026年3月末，南向通直连托管规模近8000亿元，较扩容前增加2625亿元。中信建投宏观首席周君芝指出，南向通通过"债券专用通道+闭环管理"有效补充QDII额度短板。</div>
                     <div class="article-tags">
-                        <span class="article-tag">人才流动</span>
-                        <span class="article-tag">私募托管</span>
-                        <span class="article-tag">T+0估值</span>
-                        <span class="article-tag">机构业务</span>
+                        <span class="article-tag">跨境托管</span><span class="article-tag">监管政策</span><span class="article-tag">市场趋势</span>
                     </div>
                 </div>
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">开闸10年！券商托管外包业务"突飞猛进"——协议免签、差异化路径受关注</div>
-                        <div class="article-source">行业综合报道</div>
+                        <div class="article-title">恒生电子中标光大证券托管外包信创2026优化项目</div>
+                        <div class="article-source">搜狐/证券之星</div>
                     </div>
-                    <div class="article-date">2026-07</div>
-                    <div class="article-summary">基金托管资格开放10年来，券商托管外包业务快速发展。协议免签模式加速落地，国泰海通和兴业证券免签合作经纪商已突破70家。兴业证券提出两条差异化路径：一是协同融合实现全牌照全生命周期一站式服务；二是以金融科技为手段提高服务效率和质量。行业共识：从"价格战"转向"价值战"。</div>
+                    <div class="article-date">2026-07-30</div>
+                    <div class="article-summary">光大证券7月30日发布成交公告，恒生电子中标托管外包监管新规信创2026优化项目，中标金额220万元（另含紧急部署部分48.8万元）。反映券商正加速推进托管外包系统信创改造，以适应监管新规和自主可控要求。系统优化方向包括监管新规适配、信创替代、二季度优化等。</div>
                     <div class="article-tags">
-                        <span class="article-tag">行业回顾</span>
-                        <span class="article-tag">差异化</span>
-                        <span class="article-tag">协议免签</span>
-                        <span class="article-tag">金融科技</span>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <div class="article-header">
-                        <div class="article-title">中泰证券尚元杯第四届私募优选活动启动，构建私募高质量发展交流平台</div>
-                        <div class="article-source">中泰证券托管外包（公众号）</div>
-                    </div>
-                    <div class="article-date">2026-07-31</div>
-                    <div class="article-summary">中泰证券7月30日启动"尚元杯"第四届私募优选活动，累计吸引2300余家私募参与，助力50余家管理人实现规模品牌双跨越。同期推出"2025私募高质量发展聚力计划"，升级XTP极速交易平台，打造"数据驱动、科技赋能、资源贯通"的私募服务生态。</div>
-                    <div class="article-tags">
-                        <span class="article-tag">活动营销</span>
-                        <span class="article-tag">私募生态</span>
-                        <span class="article-tag">品牌建设</span>
-                        <span class="article-tag">XTP平台</span>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <div class="article-header">
-                        <div class="article-title">争抢7亿基民存量市场，公募代销逐鹿"转托管"业务</div>
-                        <div class="article-source">21世纪经济报道</div>
-                    </div>
-                    <div class="article-date">2026-07-02</div>
-                    <div class="article-summary">公募基金存量40万亿、7亿客户，增量见顶背景下转托管成为争夺存量资金的核心工具。大型券商推出转托管赠高息理财券活动（年化8.18%），银行、互联网平台纷纷入局。行业竞争逻辑从"流量争夺"转向"信任构建"，基金转托管作为"无损搬家"方式成为客户资产迁移新趋势。</div>
-                    <div class="article-tags">
-                        <span class="article-tag">基金托管</span>
-                        <span class="article-tag">转托管</span>
-                        <span class="article-tag">存量市场</span>
-                        <span class="article-tag">代销</span>
+                        <span class="article-tag">系统上线</span><span class="article-tag">科技赋能</span><span class="article-tag">监管政策</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Broker Ranking -->
         <div class="section">
-            <div class="section-title">券商发文量排名（含媒体引用/转载）</div>
+            <div class="section-title">券商发文量排名</div>
             <div class="ranking-bar">
                 <div class="rank-num">1</div>
                 <div class="rank-name">国泰海通</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill accent" style="width: 100%">3篇</div></div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill accent" style="width: 100%">5篇</div></div>
             </div>
             <div class="ranking-bar">
                 <div class="rank-num">2</div>
-                <div class="rank-name">招商证券</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill accent" style="width: 100%">3篇</div></div>
+                <div class="rank-name">中信建投</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 80%">4篇</div></div>
             </div>
             <div class="ranking-bar">
-                <div class="rank-num">3</div>
-                <div class="rank-name">中信证券</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 93%">2.5篇</div></div>
+                <div class="rank-num">2</div>
+                <div class="rank-name">广发证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 80%">4篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">4</div>
+                <div class="rank-name">华泰证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">3篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">4</div>
+                <div class="rank-name">国信证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">3篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">4</div>
+                <div class="rank-name">中金公司</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">3篇</div></div>
             </div>
             <div class="ranking-bar">
                 <div class="rank-num">4</div>
                 <div class="rank-name">兴业证券</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 80%">2.5篇</div></div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">3篇</div></div>
             </div>
             <div class="ranking-bar">
-                <div class="rank-num">5</div>
-                <div class="rank-name">中信建投</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 73%">2篇</div></div>
-            </div>
-            <div class="ranking-bar">
-                <div class="rank-num">6</div>
-                <div class="rank-name">中金公司</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 67%">2篇</div></div>
-            </div>
-            <div class="ranking-bar">
-                <div class="rank-num">7</div>
-                <div class="rank-name">中泰证券</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 67%">2篇</div></div>
-            </div>
-            <div class="ranking-bar">
-                <div class="rank-num">8</div>
-                <div class="rank-name">华泰证券</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">1.5篇</div></div>
+                <div class="rank-num">4</div>
+                <div class="rank-name">招商证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">3篇</div></div>
             </div>
             <div class="ranking-bar">
                 <div class="rank-num">9</div>
-                <div class="rank-name">国信证券</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">1.5篇</div></div>
+                <div class="rank-name">光大证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
             </div>
             <div class="ranking-bar">
-                <div class="rank-num">10</div>
-                <div class="rank-name">广发证券</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 53%">1.5篇</div></div>
+                <div class="rank-num">9</div>
+                <div class="rank-name">申万宏源</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">9</div>
+                <div class="rank-name">中信证券</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
             </div>
         </div>
 
-        <!-- Dimension Analysis -->
         <div class="section">
             <div class="section-title">四大维度分析</div>
             <div class="dimension-grid">
                 <div class="dimension-card">
                     <div class="dim-icon d1">P</div>
                     <div class="dim-title">产品与服务介绍</div>
-                    <div class="dim-content">本月产品服务创新集中于三大方向：<strong>（1）主动ETF托管+券结一体化</strong>——国信证券同时担任托管人与券结方，华泰证券拿下4单券结，券商从通道商升级为综合服务商；<strong>（2）运营外包系统升级</strong>——兴业证券TA直销系统新增对接管理人交易系统模块，持续投入科技基础设施；<strong>（3）企业家综合服务</strong>——广发智汇企办托管资产突破千亿，从"管股份"向"管财富"迁移。此外，国泰海通和兴业证券协议免签模式合作经纪商突破70家，提升私募服务效率。标签：<em>产品发布、系统上线、服务升级、科技赋能、一站式服务</em></div>
+                    <div class="dim-content">本期产品服务亮点集中在三个方向：①主动ETF托管+券结双线布局，9家券商拿下首批券结资格，5家担任托管人，券商依托托管资质打破银行垄断，构建托管-券结-交易-做市一体化闭环；②中金公司推出国际资产托管业务"扬帆计划"，首站落地香港，填补中资管理人出海中后台服务空白；③光大证券推进托管外包信创系统优化，恒生电子中标2026年优化项目，监管新规适配和信创替代加速推进。招商证券"托管007"数字员工上线，大幅提升托管业务运营效率。</div>
                 </div>
                 <div class="dimension-card">
                     <div class="dim-icon d2">M</div>
                     <div class="dim-title">市场趋势与政策</div>
-                    <div class="dim-content">本月市场政策面信息密集：<strong>（1）私募托管格局固化</strong>——上半年数据印证"强者恒强"，前三占56.82%，前五占71%，前十占80%+；<strong>（2）托管新规重塑格局</strong>——6家券商撤回牌照申请，300亿净资产门槛+50亿持营要求淘汰中小玩家，"牌照红利"终结；<strong>（3）转托管大战</strong>——公募存量40万亿背景下，券商以高息理财券抢夺客户转托管，竞争逻辑从"流量"转向"信任"；<strong>（4）银行托管排位变动</strong>——建行4.9万亿反超工行，托管格局受5-10年战略布局影响深远。标签：<em>监管政策、行业数据、市场趋势、新规解读、规模排名</em></div>
+                    <div class="dim-content">本期核心政策与市场趋势：①私募托管前三家市占率合计56.82%，前五强超71%，行业寡头格局固化；②首批主动ETF上报，券商托管+券结模式深度嵌入，公募托管从"银行专属"向"银券共进"转变；③南向通年额度提升至8000亿元，险资6家首批落地，跨境托管基础设施持续完善；④基金托管牌照申请退潮，6家券商撤回公募牌照申请，队列清零，牌照从"普惠性资格"蜕变为"头部玩家门票"；⑤银行托管排名变化，建行以5.1万亿超越工行成为公募托管一哥；⑥上海金融法院判托管券商全额赔付559万，托管履职边界面临司法考验。</div>
                 </div>
                 <div class="dimension-card">
                     <div class="dim-icon d3">B</div>
                     <div class="dim-title">业务条线对比</div>
-                    <div class="dim-content">本期业务条线分化的核心脉络：<strong>（1）私募托管：第一梯队壁垒稳固</strong>——国泰海通(26.59%)、中信(18.16%)、招商(12.07%)三强领先，华泰(8.79%)与中信建投位列四五；<strong>（2）公募托管破局：主动ETF成为新战场</strong>——券商依托券结+托管双线切入银行主导的公募托管市场，构建银行无法复制的"托管-券结-交易-做市"闭环；<strong>（3）跨境托管：从零星试水到体系化出海</strong>——中金扬帆计划首站香港，中信/招商/国泰海通已形成跨境服务体系，130+私募持香港9号牌；<strong>（4）基金转托管</strong>——客户"无损搬家"需求激增，券商、银行、互联网平台三方争夺。标签：<em>私募托管、公募托管、跨境托管、主动ETF、转托管</em></div>
+                    <div class="dim-content">本期业务条线呈现三大对比特征：①私募托管vs公募托管：私募托管前三家占56.82%高度集中，公募托管券商占比持续提升但银行仍主导（建行5.1万亿居首），券商在私募赛道优势显著，在公募领域正加速追赶；②主动ETF托管+券结双线：4家券商同时出现在托管和券结名单，"既当托管人又当券结方"深化公募合作粘性，与单纯通道服务形成差异化竞争；③机构间REITs托管新赛道：中信建投担任居然智家24.11亿REITs管理人，中金公司担任凯德31.5亿REITs计划管理人，兴业证券/申万宏源担任联席销售，券商在REITs全链条服务中角色日益多元。</div>
                 </div>
                 <div class="dimension-card">
                     <div class="dim-icon d4">O</div>
                     <div class="dim-title">运营策略分析</div>
-                    <div class="dim-content">本月运营策略呈现鲜明特点：<strong>（1）品牌活动驱动</strong>——中泰证券"尚元杯"第四届私募优选借助活动实现品牌曝光与客户触达，通过"中泰证券托管外包"公众号推广；<strong>（2）行业研究输出</strong>——中信建投发表《资管扩容背景下的基金业务外包综述》深度研究报告，以思想领导力建立专业品牌；<strong>（3）差异化定位明确</strong>——兴业证券提出"内联外合"策略，国泰海通/兴业证券免签模式突破70家券商合作；<strong>（4）服务号覆盖瓶颈</strong>——国投证券"私募机构服务"、华泰证券相关服务号文章无法通过搜索自动获取，反映行业公众号运营中服务号触达局限性。标签：<em>活动营销、专栏策划、品牌建设、内容风格、研究输出</em></div>
+                    <div class="dim-content">本期券商AI运营策略集中体现在四个层面：①国泰海通"ALL in AI"策略最激进，灵犀App3.0亮相WAIC2026，构建"算力工厂"支撑AI规模化应用，智能化服务8300万人次；②国信证券提出从"工具赋能"走向"模式重塑"，AI向全链条渗透，打造"一客一管家、一岗一助手"智能新生态；③招商证券国际发布AI原生投研2.0系统，将投研流程工程化为"定量台/定性台/建仓台"三段协作链，从Vibe Coding升级到Agentic Engineering；④广发证券"天玑智融"集成50个智能体覆盖300余家营业部。整体看，AI在托管运营领域的应用已从概念验证期进入实战落地期，头部券商开始为AI规模化应用建设统一生态系统。</div>
                 </div>
             </div>
         </div>
 
-        <!-- Competitive Comparison -->
         <div class="section">
             <div class="section-title">头部券商竞争动态</div>
             <table class="comparison-table sortable">
@@ -535,84 +485,82 @@
                 <tbody>
                     <tr>
                         <td class="broker-name">国泰海通</td>
+                        <td>5</td>
+                        <td>私募托管集中度/AI灵犀3.0/主动ETF/REITs/行业趋势</td>
+                        <td>私募托管市占率26.59%稳居榜首，ALL in AI策略行业领先</td>
+                        <td>AI生态先行者，构建算力工厂支撑规模化应用</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">中信建投</td>
+                        <td>4</td>
+                        <td>主动ETF/REITs/行业报告/牌照退潮</td>
+                        <td>居然智家24.11亿REITs管理人，主动ETF券结2单</td>
+                        <td>REITs全链条服务能力突出，研报前瞻性强</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">广发证券</td>
+                        <td>4</td>
+                        <td>数字金融AI/智汇企办/主动ETF托管/企业家办公室</td>
+                        <td>天玑智融50个智能体，智汇企办托管资产千亿</td>
+                        <td>AI+财富管理双轮驱动，企业家办公室特色赛道</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">华泰证券</td>
                         <td>3</td>
-                        <td>私募托管榜首(26.59%)、主动ETF券结、协议免签</td>
-                        <td>私募托管市占第一，免签合作经纪商突破70家</td>
-                        <td>以规模优势+系统能力构建综合壁垒</td>
+                        <td>主动ETF券结/私募托管/AI</td>
+                        <td>主动ETF券结4单居首，私募托管市占率8.79%</td>
+                        <td>ETF综合服务能力领先，托管+券结双线布局</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">国信证券</td>
+                        <td>3</td>
+                        <td>主动ETF券结托管/AI重塑/私募托管</td>
+                        <td>主动ETF券结4单+托管1单，AI从工具到模式重塑</td>
+                        <td>科技引领基因延续，AI智能新生态前瞻布局</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">中金公司</td>
+                        <td>3</td>
+                        <td>扬帆计划跨境托管/REITs/行业趋势</td>
+                        <td>正式发布国际资产托管业务，首站香港</td>
+                        <td>跨境托管先行者，连接中国与全球市场</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">兴业证券</td>
+                        <td>3</td>
+                        <td>REITs联席销售/主动ETF/南向通</td>
+                        <td>凯德REITs联席销售，主动ETF券结1单</td>
+                        <td>REITs生态参与多元，跨境业务研究深入</td>
                     </tr>
                     <tr>
                         <td class="broker-name">招商证券</td>
                         <td>3</td>
-                        <td>私募托管前三(12.07%)、跨境CMS-Partner+、人才流动</td>
-                        <td>托管部高管掌舵资管，跨境服务体系完善</td>
-                        <td>人才跨界打通托管与机构业务，全球化布局领先</td>
-                    </tr>
-                    <tr>
-                        <td class="broker-name">中信证券</td>
-                        <td>2.5</td>
-                        <td>私募托管第二(18.16%)、主动ETF、境外基金服务</td>
-                        <td>iservice平台+基金运营服务公众号,跨境先行者</td>
-                        <td>多牌照协同，"托管+券结+做市"全链条</td>
-                    </tr>
-                    <tr>
-                        <td class="broker-name">兴业证券</td>
-                        <td>2.5</td>
-                        <td>TA系统升级、差异化路径、协议免签</td>
-                        <td>提出"内联外合"差异化策略，系统持续投入</td>
-                        <td>以金融科技+业务融合双轮驱动差异化</td>
-                    </tr>
-                    <tr>
-                        <td class="broker-name">中金公司</td>
-                        <td>2</td>
-                        <td>"扬帆计划"国际托管首站香港、私募出海</td>
-                        <td>精准切入跨境托管蓝海，瞄准中资出海痛点</td>
-                        <td>高端定位+国际化品牌，跨境托管新势力</td>
-                    </tr>
-                    <tr>
-                        <td class="broker-name">中泰证券</td>
-                        <td>2</td>
-                        <td>尚元杯私募优选、XTP极速交易平台升级</td>
-                        <td>累计吸引2300+私募参与，打造私募生态孵化器</td>
-                        <td>活动IP化运营，公众号+APP多渠道触达</td>
-                    </tr>
-                    <tr>
-                        <td class="broker-name">广发证券</td>
-                        <td>1.5</td>
-                        <td>企业家办公室千亿托付、四维服务体系</td>
-                        <td>托管资产1034亿，企办户均超10亿</td>
-                        <td>企业家客群深度经营，从托管到财富管理延伸</td>
-                    </tr>
-                    <tr>
-                        <td class="broker-name">国信证券</td>
-                        <td>1.5</td>
-                        <td>主动ETF券结4单、托管+券结双角色</td>
-                        <td>同时担任托管人和券结方，深度嵌入ETF生态</td>
-                        <td>以券结撬动公募托管，中小规模破局路径</td>
+                        <td>私募托管/AI投研2.0/托管007</td>
+                        <td>私募托管12.07%第三，AI原生投研系统2.0</td>
+                        <td>AI证券公司战略，托管数字员工实战落地</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <!-- Trend Forecast -->
         <div class="section">
             <div class="section-title">趋势研判与关注提示</div>
             <div class="trend-box">
-                <p><strong>趋势一：私募托管寡头格局不可逆，差异化成为二梯队生存法则。</strong>前三强市占56.82%且持续提升，中小券商托管牌照面临"持营保牌"压力。二梯队需快速找准差异化定位——兴业"内联外合"、中泰"私募优选IP"、中金"跨境托管"是典型路径。纯基础托管服务已无独立价值，必须搭建"托管+X"生态。</p>
-                <p><strong>趋势二：主动ETF将重塑公募托管竞争格局。</strong>首批主动ETF获券商前所未有的深度参与——不仅是托管人，更是券结方、做市商、投顾服务商。这打破了银行对公募托管的垄断，券商有望在主动ETF赛道获取更大的公募托管份额。拥有研究+交易+托管综合能力的券商将优先受益。</p>
-                <p><strong>趋势三：跨境托管从"可选项"变为"必选项"。</strong>中金扬帆计划标志着跨境托管进入体系化竞争阶段。130+私募持香港9号牌、超40家百亿级出海，需求端已爆发。招商、中信、国泰海通先行布局，但市场远未饱和，具备境外持牌平台+境内客户基础的券商存在后发优势窗口。</p>
-                <p><strong>趋势四：AI与科技正从"效率工具"升级为"竞争壁垒"。</strong>头部券商在极速估值、智能风控、自动化运营方面的投入已转化为客户留存的关键要素。AI代理交易、智能合同审核等前沿应用逐步落地，科技差距可能成为客户"用脚投票"的决定因素。</p>
-                <p><span class="highlight">下期关注：</span>① 主动ETF第二批名单及券商参与情况，关注银行反制策略；② 跨境托管新入局者（东方证券、申万宏源等）动态；③ 托管新规正式稿落地时间及对中小券商的实际影响；④ 各券商半年度托管规模数据披露及排名变化；⑤ AI在托管运营中的实际应用案例（智能估值、合同审核、风控预警等）。</p>
+                <p>基于本期数据，我们研判四大行业趋势：</p>
+                <p><span class="highlight">趋势一：私募托管寡头格局进一步固化。</span>国泰海通26.59%、中信18.16%、招商12.07%，前三占56.82%，前五超71%。头部券商系统建设成熟、估值清算能力验证充分，中小券商托管系统滞后，行业资源加速向头部集中。托管费率价格战已触底，竞争焦点转向系统稳定性、估值精准度和机构品牌信誉。</p>
+                <p><span class="highlight">趋势二：AI赋能托管运营进入实战落地期。</span>国泰海通灵犀3.0服务8300万人次、招商证券托管007数字员工上线、广发天玑智融50个智能体、光大信创系统优化——AI从概念验证进入规模化应用阶段，智能风控、自动化估值清算、绩效归因分析等场景加速落地，"无人值守托管"渐成行业标配。</p>
+                <p><span class="highlight">趋势三：主动ETF托管+券结双线重塑公募格局。</span>首批18只主动ETF中17只采用券结模式，9家券商拿下首批资格，4家同时兼具托管+券结双重身份。券商依托托管资质打破银行垄断，构建托管-券结-交易-做市一体化服务闭环，公募托管从"银行专属"向"银券共进"转变加速。</p>
+                <p><span class="highlight">趋势四：跨境托管加速布局。</span>中金扬帆计划首站香港、南向通扩容至8000亿、险资6家首批落地——跨境托管基础设施持续完善。中资管理人出海体系化、规模化趋势明显，托管估值和基金运营等中后台职能成为痛点，具备全球托管服务能力的机构将迎来全新增长空间。</p>
+                <p><span class="highlight">下期关注：</span>①主动ETF正式获批发行后的托管券结格局演变；②中金扬帆计划后续跨境托管业务落地进展；③AI智能体在托管运营全流程的深度应用案例；④机构间REITs扩容及券商托管角色拓展；⑤基金托管牌照新规对行业准入门槛的持续影响；⑥南向通险资参与深化对跨境托管需求的拉动效应。</p>
             </div>
         </div>
 
-        <!-- Footer -->
         <div class="report-footer">
             本报告由券商托管外包业务发文分析技能自动生成 | 数据来源：微信公众号公开文章及网络公开信息<br>
-            统计周期：2026-07-03 ~ 2026-08-03 | 报告生成时间：2026年8月3日 18:30
+            统计周期：2026-07-04 ~ 2026-08-04 | 报告生成时间：2026-08-04 08:50
         </div>
     </div>
 
-    <!-- Table Sorting Script -->
     <script>
     (function() {
         function sortTable(table, colIdx, type, direction) {
