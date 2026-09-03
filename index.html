@@ -21,6 +21,21 @@
             box-shadow: 0 2px 20px rgba(0,0,0,0.08);
             overflow: hidden;
         }
+        .feishu-status {
+            padding: 10px 48px;
+            background: #fdf0f0;
+            border-bottom: 1px solid #e8c4c4;
+            font-size: 13px;
+            color: #a94442;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .feishu-status.success {
+            background: #f0f9f0;
+            border-bottom-color: #c4e8c4;
+            color: #3c763d;
+        }
         .report-header {
             background: linear-gradient(135deg, #1a3a6b 0%, #2d5aa0 100%);
             color: #fff;
@@ -252,23 +267,28 @@
 </head>
 <body>
     <div class="report-container">
+        <!-- Feishu Sync Status -->
+        <div class="feishu-status">
+            <strong>飞书文档暂未同步</strong> | user身份授权过期，请访问GitHub Pages查看完整报告：https://whitesky-fire.github.io/custody-report-pages/
+        </div>
+
         <!-- Header -->
         <div class="report-header">
             <span class="report-type">月度报告</span>
             <h1>券商托管外包业务微信公众号发文分析报告</h1>
-            <div class="date-range">统计周期：2026-08-02 ~ 2026-09-02</div>
+            <div class="date-range">统计周期：2026-08-03 ~ 2026-09-03</div>
             <div class="report-author">报告人：国投证券-资产托管部-平台数据组</div>
-            <div class="generate-time">报告生成时间：2026-09-02 09:01:39</div>
+            <div class="generate-time">报告生成时间：2026-09-03 08:59:32</div>
         </div>
 
         <!-- Summary Stats -->
         <div class="summary-stats">
             <div class="stat-card">
-                <div class="stat-value">35</div>
+                <div class="stat-value">38</div>
                 <div class="stat-label">发文总量（篇）</div>
             </div>
             <div class="stat-card accent">
-                <div class="stat-value">18</div>
+                <div class="stat-value">19</div>
                 <div class="stat-label">涉及券商（家）</div>
             </div>
             <div class="stat-card">
@@ -276,7 +296,7 @@
                 <div class="stat-label">热点话题（个）</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">1.9</div>
+                <div class="stat-value">2.0</div>
                 <div class="stat-label">券商均发文（篇）</div>
             </div>
         </div>
@@ -285,10 +305,10 @@
         <div class="section">
             <div class="section-title">本期概览</div>
             <div class="trend-box">
-                <p>2026年8月（统计周期2026-08-02至2026-09-02），券商托管外包业务延续“政策驱动+业绩验证+科技赋能”的主线。政策端，《私募证券投资基金运作指引》24个月过渡期于8月1日正式收官，未整改存量产品进入“三不得”刚性约束阶段；证监会《私募投资基金信息披露监督管理办法》及中基协配套细则于9月1日起施行，招商、华泰等托管机构密集推出清算信披、合规洞察等专题解读与系统赋能服务。业绩端，上市券商半年报披露收官，托管业务“强者更强”格局凸显：国泰海通托管与基金服务规模达5.45万亿元、行业第一，中信证券托管客户资产超17万亿元，招商证券托管外包规模4.99万亿元，光大、长江、东方等券商托管规模增速均超过20%。服务号文章（国投证券“私募机构服务”、华泰“行知”等）仍受微信平台硬限制，暂无法自动获取。</p>
+                <p>2026年8月（统计周期2026-08-03至2026-09-03），券商托管外包业务延续“政策驱动+业绩验证+科技赋能”的主线。政策端，《私募证券投资基金运作指引》24个月过渡期于8月1日正式收官，未整改存量产品进入“三不得”刚性约束阶段；证监会《私募投资基金信息披露监督管理办法》及中基协配套细则于9月1日正式施行，标志着私募信披从自律规则升级为部门规章；每日经济新闻报道指出，新规通过穿透式披露、重大事件临时报告（5个工作日内）、托管人复核审查等制度直击管理人失联、底层资产不透明等行业痛点。招商、华泰等托管机构密集推出清算信披、合规洞察等专题解读与系统赋能服务。业绩端，上市券商半年报披露收官，托管业务“强者更强”格局凸显：国泰海通托管与基金服务规模达5.45万亿元、行业第一，中信证券托管客户资产超17万亿元，招商证券托管外包规模4.99万亿元，光大、长江、东方等券商托管规模增速均超过20%。ETF托管格局重塑：券商系增量前十占八席，长江证券增量412亿元居首。8月私募备案1858只产品，证券类托管国泰海通340只、中信203只、华泰184只领先。光大、国元、华福等券商发布9月私募运营日历。服务号文章（国投证券“私募机构服务”、华泰“行知”等）仍受微信平台硬限制，暂无法自动获取。</p>
             </div>
             <div class="notice-box">
-                <strong>服务号覆盖提示：</strong>国投证券“私募机构服务”、华泰证券“行知·托管外包”等部分券商账号为微信服务号，受微信平台硬限制，外部搜索引擎暂无法自动发现其文章。本报告已根据公开搜索与官网信息作标注，如用户持有相关文章URL可补充至下期报告。
+                <strong>服务号覆盖提示：</strong>国投证券"私募机构服务"、华泰证券"行知·托管外包"等部分券商账号为微信服务号，受微信平台硬限制，外部搜索引擎暂无法自动发现其文章。本报告已根据公开搜索与官网信息作标注，如用户持有相关文章URL可补充至下期报告。
             </div>
         </div>
 
@@ -298,7 +318,18 @@
             <div class="article-list">
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">私募基金清算信披新规落地在即，招证托管“牛牛来”清盘赋能服务升级</div>
+                        <div class="article-title">25万亿私募信披新规落地：穿透“黑箱”之后，机构合规升级进行时</div>
+                        <div class="article-source">每日经济新闻</div>
+                    </div>
+                    <div class="article-date">2026-09-02</div>
+                    <div class="article-summary">9月1日证监会《私募投资基金信息披露监督管理办法》及中基协配套细则正式施行，标志着私募信披从自律规则升级为证监会部门规章。新规通过穿透式披露、重大事件临时报告（5个工作日内）、托管人复核审查等制度直击管理人失联、底层资产不透明、投资者维权无门等行业痛点。淡水泉等头部私募已启动合规升级，招商证券等托管机构搭建全新信披平台。截至7月末存续私募基金14.47万只、管理规模25.73万亿元。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">市场趋势与政策 / 监管政策 / 新规解读</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">私募基金清算信披新规落地，招证托管“牛牛来”清盘赋能服务升级</div>
                         <div class="article-source">招商证券</div>
                     </div>
                     <div class="article-date">2026-08月下旬</div>
@@ -320,22 +351,11 @@
                 </div>
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">运作指引过渡期倒计时：整改清零操作指南</div>
-                        <div class="article-source">招商证券</div>
-                    </div>
-                    <div class="article-date">2026-08-01前后</div>
-                    <div class="article-summary">《私募证券投资基金运作指引》过渡期于7月31日结束。招商证券通过管理人服务平台上线“产品整改情况表”导出功能，提供批量整改与人工整改双通道操作指引，提示管理人及时签署总对总协商函、完成合同层面与运作层面整改，避免触发“三不得”限制。</div>
-                    <div class="article-tags">
-                        <span class="article-tag">监管政策 / 产品与服务 / 合规教育</span>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <div class="article-header">
                         <div class="article-title">2026年半年度报告：托管与基金服务业务规模54549亿元</div>
                         <div class="article-source">国泰海通</div>
                     </div>
                     <div class="article-date">2026-08-19</div>
-                    <div class="article-summary">国泰海通披露合并后首个完整半年度报告，托管与基金服务业务规模达54549亿元，较上年末增长20.8%；公募基金托管规模、累计托管私募证券投资基金数量市场份额、新增托管私募证券基金数量市场份额均排名行业第一。</div>
+                    <div class="article-summary">国泰海通披露合并后首个完整半年度报告，托管与基金服务业务规模达54549亿元，较上年末增长20.8%；公募基金托管规模、累计托管私募证券投资基金数量市场份额、新增托管私募证券基金数量市场份额均排名行业第一。8月证券类私募托管新增产品340只，稳居行业首位。</div>
                     <div class="article-tags">
                         <span class="article-tag">业务条线对比 / 规模排名 / 行业数据</span>
                     </div>
@@ -346,53 +366,53 @@
                         <div class="article-source">中信证券</div>
                     </div>
                     <div class="article-date">2026-08-20</div>
-                    <div class="article-summary">中信证券上半年实现营业收入496.92亿元、归母净利润233.43亿元，同比增长69.60%，创历史中期最好水平。报告期末托管客户资产规模超过17万亿元，较上年末增长14%；客户总量突破1800万户。</div>
+                    <div class="article-summary">中信证券上半年实现营业收入496.92亿元、归母净利润233.43亿元，同比增长69.60%，创历史中期最好水平。报告期末托管客户资产规模超过17万亿元，较上年末增长14%；客户总量突破1800万户。8月证券类私募托管新增产品203只。</div>
                     <div class="article-tags">
                         <span class="article-tag">业务条线对比 / 规模排名 / 行业数据</span>
                     </div>
                 </div>
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">2026年半年度报告：资产托管及外包业务高增</div>
+                        <div class="article-title">ETF托管格局重塑：券商系抢位，头部集中度回落</div>
+                        <div class="article-source">新浪财经</div>
+                    </div>
+                    <div class="article-date">2026-08-18</div>
+                    <div class="article-summary">ETF托管市场从5.59万亿高点回落至4.45万亿元，券商系逆势突围。年内托管规模增量前十机构中券商占8席：长江证券增量412.33亿元居首，广发证券282.17亿元、中信证券211.56亿元分列其后。新发ETF中信建投托管22只领跑。市场从“规模爆发期”迈入“精耕细作期”。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">业务条线对比 / 市场趋势 / 规模排名</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">2026年半年度报告：新增公募基金托管数量24只，位居行业第一</div>
+                        <div class="article-source">中信建投</div>
+                    </div>
+                    <div class="article-date">2026-08月下旬</div>
+                    <div class="article-summary">中信建投半年报显示，报告期内新增公募基金托管数量24只位居行业第一。截至报告期末，公募基金托管规模2984.54亿元位居行业前三；资产托管产品5808只，运营服务产品6705只。公司将持续推进数智托管建设，探索跨境一体化基金行政管理人业务落地。</div>
+                    <div class="article-tags">
+                        <span class="article-tag">业务条线对比 / 规模排名 / 产品与服务</span>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-header">
+                        <div class="article-title">光证托管·私募基金9月运营日历</div>
                         <div class="article-source">光大证券</div>
                     </div>
-                    <div class="article-date">2026-08-20</div>
-                    <div class="article-summary">光大证券上半年机构客户业务收入同比增长48%，毛利率达79%。其中资产托管及外包业务表现亮眼：公募及私募基金托管规模982.94亿元，同比增长80.61%；私募基金外包规模1560.52亿元，同比增长19.65%。</div>
+                    <div class="article-date">2026-09月初</div>
+                    <div class="article-summary">光大证券托管与基金服务发布2026年9月私募基金运营日历，标注证券类私募产品月报推送（9月3日）、量化私募基金运行报表报送截止（9月7日）、规模以上证券类管理人运行报表报送截止（9月14日）、增值税纳税申报截止（9月15日）等关键时间节点，助力管理人及时完成信息披露。</div>
                     <div class="article-tags">
-                        <span class="article-tag">业务条线对比 / 规模排名 / 产品与服务</span>
+                        <span class="article-tag">产品与服务 / 运营策略 / 运营日历</span>
                     </div>
                 </div>
                 <div class="article-card">
                     <div class="article-header">
-                        <div class="article-title">2026年半年度报告：资产托管与基金服务总规模1514亿元</div>
-                        <div class="article-source">长江证券</div>
+                        <div class="article-title">国元证券托管部9月运营日历</div>
+                        <div class="article-source">国元证券</div>
                     </div>
-                    <div class="article-date">2026-08月</div>
-                    <div class="article-summary">长江证券半年报显示，资产托管与基金服务业务总规模达1514亿元，较上年末大幅增长67.3%；新增私募基金托管产品数量市场占有率稳居行业第11位。公司依托“金长江”私募综合金融服务体系，推进“金管家”平台数字化与智能化建设。</div>
+                    <div class="article-date">2026-09月初</div>
+                    <div class="article-summary">国元证券发布2026年9月托管部运营日历，标注中基协私募证券基金月报送截止（9月7日）、量化私募运行报表报送截止（9月7日）、规模以上管理人运行报表报送截止（9月14日）、增值税纳税申报截止（9月15日）等关键节点，并同步在机构服务平台提供月报和纳税申报表下载。</div>
                     <div class="article-tags">
-                        <span class="article-tag">业务条线对比 / 规模排名 / 产品与服务</span>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <div class="article-header">
-                        <div class="article-title">私募合规观察（2026年8月）</div>
-                        <div class="article-source">中泰证券</div>
-                    </div>
-                    <div class="article-date">2026-08月</div>
-                    <div class="article-summary">中泰证券托管部发布8月私募合规观察，汇总7月各地监管局25份行政监管措施及中基协10份纪律处分决定书，聚焦夸大片面宣传、投资者适当性、关联交易披露、合规风控负责人缺位等高频违规点，并提示诉讼仲裁中的适当性义务履行风险。</div>
-                    <div class="article-tags">
-                        <span class="article-tag">市场趋势与政策 / 运营策略 / 合规教育</span>
-                    </div>
-                </div>
-                <div class="article-card">
-                    <div class="article-header">
-                        <div class="article-title">2026年半年度报告：托管外包证券类产品规模同比增长24.91%</div>
-                        <div class="article-source">东方证券</div>
-                    </div>
-                    <div class="article-date">2026-08-29</div>
-                    <div class="article-summary">东方证券半年报显示，托管外包证券类产品规模同比增长24.91%。公司贯彻落实“强赋能、防风险、提规模”战略，推出新版管理人服务平台，加快业务系统信创化、AI化建设，持续深化集团协同。</div>
-                    <div class="article-tags">
-                        <span class="article-tag">产品与服务 / 业务条线对比 / 科技赋能</span>
+                        <span class="article-tag">产品与服务 / 运营策略 / 运营日历</span>
                     </div>
                 </div>
                 <div class="article-card">
@@ -401,7 +421,7 @@
                         <div class="article-source">招商证券</div>
                     </div>
                     <div class="article-date">2026-08月下旬</div>
-                    <div class="article-summary">招商证券上半年托管外包产品数量3.43万只、规模4.99万亿元，较2025年末增长16.59%；托管外包收入同比增长32.08%。公司在行业内率先推出代销私募T+0净值信披服务，行业首创“AI-小招”绩效助手，境外基金行政管理外包业务规模339.20亿港元。</div>
+                    <div class="article-summary">招商证券上半年托管外包产品数量3.43万只、规模4.99万亿元，较2025年末增长16.59%；托管外包收入同比增长32.08%。公司在行业内率先推出代销私募T+0净值信披服务，行业首创“AI-小招”绩效助手，境外基金行政管理外包业务规模339.20亿港元。私募基金托管产品数量市场份额达20.87%。</div>
                     <div class="article-tags">
                         <span class="article-tag">业务条线对比 / 产品与服务 / 科技赋能</span>
                     </div>
@@ -435,26 +455,26 @@
             <div class="ranking-bar">
                 <div class="rank-num">5</div>
                 <div class="rank-name">光大证券</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">3篇</div></div>
             </div>
             <div class="ranking-bar">
                 <div class="rank-num">6</div>
+                <div class="rank-name">中信建投</div>
+                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 60%">3篇</div></div>
+            </div>
+            <div class="ranking-bar">
+                <div class="rank-num">7</div>
                 <div class="rank-name">长江证券</div>
                 <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
             </div>
             <div class="ranking-bar">
-                <div class="rank-num">7</div>
+                <div class="rank-num">8</div>
                 <div class="rank-name">东方证券</div>
                 <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
             </div>
             <div class="ranking-bar">
-                <div class="rank-num">8</div>
-                <div class="rank-name">中泰证券</div>
-                <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
-            </div>
-            <div class="ranking-bar">
                 <div class="rank-num">9</div>
-                <div class="rank-name">中信建投</div>
+                <div class="rank-name">中泰证券</div>
                 <div class="rank-bar-bg"><div class="rank-bar-fill" style="width: 40%">2篇</div></div>
             </div>
             <div class="ranking-bar">
@@ -471,22 +491,22 @@
                 <div class="dimension-card">
                     <div class="dim-icon d1">P</div>
                     <div class="dim-title">产品与服务介绍</div>
-                    <div class="dim-content">本月产品与服务亮点集中在合规系统升级与AI赋能。招商证券推出“牛牛来”清盘赋能服务，覆盖未变现原因智能预填、跨年度清算预警、费用账明细查询、线上闭环等场景；东方证券推出新版管理人服务平台；华泰行知INCOS平台持续迭代数字员工（RPA）与信息披露功能；招商证券首创“AI-小招”绩效助手并落地代销私募T+0净值信披。头部券商正将托管服务从“基础运营”向“全生命周期数字化陪伴”升级。</div>
+                    <div class="dim-content">本月产品与服务亮点集中在合规系统升级与AI赋能。招商证券推出“牛牛来”清盘赋能服务，覆盖未变现原因智能预填、跨年度清算预警、费用账明细查询、线上闭环等场景；东方证券推出新版管理人服务平台；华泰行知INCOS平台持续迭代数字员工（RPA）与信息披露功能；招商证券首创“AI-小招”绩效助手并落地代销私募T+0净值信披。光大、国元、华福等券商发布9月私募运营日历，为管理人提供信息披露时间节点提醒。头部券商正将托管服务从“基础运营”向“全生命周期数字化陪伴”升级。</div>
                 </div>
                 <div class="dimension-card">
                     <div class="dim-icon d2">M</div>
                     <div class="dim-title">市场趋势与政策</div>
-                    <div class="dim-content">政策窗口期密集：8月1日《私募证券投资基金运作指引》24个月过渡期结束，未整改产品触发“三不得”；8月7日沪深交易所就LOF终止上市新规征求意见；8月22日前后市场聚焦证监会《私募投资基金信息披露监督管理办法》9月1日施行；证监会修订《证券投资基金托管业务管理办法》向社会公开征求意见，剑指“托而不管”、准入门槛、退出机制等痛点；截至8月25日，年内私募机构收到罚单1808张，监管扶优限劣提速。</div>
+                    <div class="dim-content">政策窗口期密集且落地执行：8月1日《私募证券投资基金运作指引》24个月过渡期结束，未整改产品触发“三不得”；8月7日沪深交易所就LOF终止上市新规征求意见；9月1日证监会《私募投资基金信息披露监督管理办法》及中基协配套细则正式施行，新规通过穿透式披露、重大事件临时报告（5个工作日内）、托管人复核审查等制度直击管理人失联、底层资产不透明等行业痛点；8月私募备案1858只产品，股权类托管率从89.62%升至93.14%，国办54号文“强制托管”信号释放见效；截至8月25日，年内私募机构收到罚单1808张，监管扶优限劣提速。</div>
                 </div>
                 <div class="dimension-card">
                     <div class="dim-icon d3">B</div>
                     <div class="dim-title">业务条线对比</div>
-                    <div class="dim-content">半年报数据印证“强者更强”。国泰海通托管与基金服务规模5.45万亿元、行业第一；中信证券托管客户资产超17万亿元；招商证券托管外包规模4.99万亿元，私募托管产品数量市占率20.87%；光大、长江、东方托管规模同比增速分别超80%、67%、24%。细分赛道上，ETF托管、跨境托管、REITs托管成为头部券商争夺焦点，中小券商则侧重区域成长型私募与陪伴式服务。</div>
+                    <div class="dim-content">半年报数据印证“强者更强”。国泰海通托管与基金服务规模5.45万亿元、行业第一；中信证券托管客户资产超17万亿元；招商证券托管外包规模4.99万亿元，私募托管产品数量市占率20.87%；光大、长江、东方托管规模同比增速分别超80%、67%、24%。中信建投新增公募基金托管24只位居行业第一，规模2984.54亿元行业前三。ETF托管格局重塑：券商系增量前十占八席，长江412亿、广发282亿、中信212亿；新发ETF中信建投托管22只领跑。8月证券类私募托管国泰海通340只、中信203只、华泰184只领先。</div>
                 </div>
                 <div class="dimension-card">
                     <div class="dim-icon d4">O</div>
                     <div class="dim-title">运营策略分析</div>
-                    <div class="dim-content">头部券商形成固定内容IP：华泰“行知·私募合规洞察”、中泰“私募合规观察”、招商“招证托管”系列均为月度/定期栏目，内容以政策解读+合规案例+操作指引为主；华泰8月私募运营日历、招商整改清零操作指南等工具型内容提升用户粘性。服务号券商（国投、华泰行知等）因微信搜索限制仍无法自动获取，报告中已作标注。</div>
+                    <div class="dim-content">头部券商形成固定内容IP：华泰“行知·私募合规洞察”、中泰“私募合规观察”、招商“招证托管”系列均为月度/定期栏目，内容以政策解读+合规案例+操作指引为主；华泰8月私募运营日历、招商整改清零操作指南等工具型内容提升用户粘性。光大、国元、华福9月运营日历延续月度栏目传统。服务号券商（国投、华泰行知等）因微信搜索限制仍无法自动获取，报告中已作标注。</div>
                 </div>
             </div>
         </div>
@@ -508,43 +528,50 @@
                     <tr>
                         <td class="broker-name">国泰海通</td>
                         <td>4</td>
-                        <td>托管规模、公募/私募市占率、半年报</td>
-                        <td>托管与基金服务规模5.45万亿元，公募托管规模、累计及新增私募证券基金托管市占率均行业第一</td>
+                        <td>托管规模、公募/私募市占率、半年报、8月托管340只</td>
+                        <td>托管与基金服务规模5.45万亿元；8月证券类私募托管新增340只稳居行业首位；公募托管规模、累计及新增私募证券基金托管市占率均行业第一</td>
                         <td>合并后首个完整半年报，机构与交易业务贡献47%营收，强调“1+1&gt;2”整合效应</td>
                     </tr>
                     <tr>
                         <td class="broker-name">中信证券</td>
                         <td>3</td>
-                        <td>托管客户资产、半年报业绩、分红</td>
-                        <td>托管客户资产超17万亿元；归母净利润233.43亿元，同比+69.60%，创历史中期最好水平</td>
+                        <td>托管客户资产、半年报业绩、8月托管203只</td>
+                        <td>托管客户资产超17万亿元；归母净利润233.43亿元，同比+69.60%；8月证券类私募托管新增203只</td>
                         <td>以综合金融服务能力巩固头部地位，强调客户总量突破1800万户</td>
                     </tr>
                     <tr>
                         <td class="broker-name">招商证券</td>
                         <td>5</td>
-                        <td>清算信披新规、运作指引整改、AI赋能、半年报</td>
-                        <td>托管外包规模4.99万亿元；私募托管产品数量市占率20.87%；“AI-小招”绩效助手、T+0净值信披</td>
+                        <td>清算信披新规、运作指引整改、AI赋能、半年报、投资人平台</td>
+                        <td>托管外包规模4.99万亿元；私募托管产品数量市占率20.87%；“AI-小招”绩效助手、T+0净值信披、投资人平台查询</td>
                         <td>以合规解读+系统赋能+业绩快报组合运营，内容工具化、系列化</td>
                     </tr>
                     <tr>
                         <td class="broker-name">华泰证券</td>
                         <td>4</td>
-                        <td>私募合规洞察、LOF新规、8月运营日历</td>
-                        <td>行知·托管外包平台INCOS持续迭代，数字员工（RPA）覆盖网下打新、信息披露等场景</td>
+                        <td>私募合规洞察、LOF新规、8月运营日历、8月托管184只</td>
+                        <td>行知·托管外包平台INCOS持续迭代，数字员工（RPA）覆盖网下打新、信息披露等场景；8月证券类私募托管新增184只</td>
                         <td>“行知”品牌下的合规洞察与运营日历形成固定栏目，科技驱动运营</td>
                     </tr>
                     <tr>
                         <td class="broker-name">光大证券</td>
-                        <td>2</td>
-                        <td>半年报、托管规模高增</td>
-                        <td>公募及私募基金托管规模982.94亿元，同比+80.61%；私募基金外包规模1560.52亿元</td>
-                        <td>借半年报披露突出机构业务高增，强调科技赋能与运营提质增效</td>
+                        <td>3</td>
+                        <td>半年报、托管规模高增、9月运营日历</td>
+                        <td>公募及私募基金托管规模982.94亿元，同比+80.61%；私募基金外包规模1560.52亿元；发布9月私募运营日历</td>
+                        <td>借半年报披露突出机构业务高增，运营日历形成月度固定栏目</td>
+                    </tr>
+                    <tr>
+                        <td class="broker-name">中信建投</td>
+                        <td>3</td>
+                        <td>半年报、公募托管24只行业第一、ETF托管22只</td>
+                        <td>新增公募基金托管数量24只位居行业第一；公募基金托管规模2984.54亿元行业前三；资产托管产品5808只；新发ETF托管22只</td>
+                        <td>推进数智托管建设，探索跨境一体化基金行政管理人业务落地</td>
                     </tr>
                     <tr>
                         <td class="broker-name">长江证券</td>
                         <td>2</td>
-                        <td>半年报、托管规模</td>
-                        <td>资产托管与基金服务总规模1514亿元，同比+67.3%；新增私募托管产品市占率行业第11位</td>
+                        <td>半年报、ETF托管增量第一</td>
+                        <td>资产托管与基金服务总规模1514亿元，同比+67.3%；ETF托管年内增量412.33亿元居券商首位</td>
                         <td>依托“金长江”私募综合金融服务体系，推进“金管家”平台数字化智能化</td>
                     </tr>
                     <tr>
@@ -554,13 +581,6 @@
                         <td>托管外包证券类产品规模同比+24.91%；推出新版管理人服务平台</td>
                         <td>强调“强赋能、防风险、提规模”，加快系统信创化、AI化</td>
                     </tr>
-                    <tr>
-                        <td class="broker-name">中泰证券</td>
-                        <td>2</td>
-                        <td>私募合规观察</td>
-                        <td>系统梳理7月监管处罚与协会处分案例，聚焦适当性义务、关联交易等合规风险</td>
-                        <td>以“私募合规观察”固定栏目输出合规教育内容</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -569,15 +589,15 @@
         <div class="section">
             <div class="section-title">趋势研判与关注提示</div>
             <div class="trend-box">
-                <p>展望9月及下半年，券商托管外包行业将呈现三大趋势：一是合规能力成为核心竞争力，私募信披新规与托管办法修订将压实托管人复核与监督责任，头部券商凭借系统与规模优势进一步拉开差距；二是行业集中度持续提升，中小券商需在区域深耕、特色服务（如量化、跨境、REITs）上寻找差异化切口；三是AI与数字化全面渗透运营环节，从估值清算、信息披露到绩效分析、合规监测，数字员工与智能平台将成为标配。</p>
-                <p><span class="highlight">下期关注：</span>① 9月新规首月执行情况，关注管理人定期报告、临时报告、清算报告落地质量；② 三季度托管规模数据及头部券商市占率变化；③ 证监会《证券投资基金托管业务管理办法》修订进展及行业反馈；④ 服务号券商（国投、华泰行知）是否有用户补充文章URL，可人工补充至下期报告。</p>
+                <p>展望9月及下半年，券商托管外包行业将呈现三大趋势：一是合规能力成为核心竞争力，私募信披新规9月1日正式施行后进入“执行首月”，穿透式披露、临时报告5个工作日时限、托管人复核审查等刚性约束全面落地，头部券商凭借系统与规模优势进一步拉开差距；二是行业集中度持续提升，ETF托管格局重塑、8月备案1858只产品中券商系增量显著，中信建投公募托管新增24只领跑，中小券商需在区域深耕、特色服务上寻找差异化切口；三是AI与数字化全面渗透运营环节，从估值清算、信息披露到绩效分析、合规监测，数字员工与智能平台将成为标配，招商“AI-小招”、华泰INCOS数字员工等先行实践已验证可行性。</p>
+                <p><span class="highlight">下期关注：</span>① 9月新规首月执行情况，关注管理人首期季报编制报送质量、临时报告5个工作日时限落地；② 三季度托管规模数据及头部券商市占率变化，关注ETF托管格局重塑后续走势；③ 证监会《证券投资基金托管业务管理办法》修订进展及行业反馈；④ 股权类私募托管率从89.62%升至93.14%后续趋势，国办54号文“强制托管”信号持续释放；⑤ 服务号券商（国投、华泰行知）是否有用户补充文章URL，可人工补充至下期报告。</p>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="report-footer">
             本报告由券商托管外包业务发文分析技能自动生成 | 数据来源：微信公众号公开文章及网络公开信息<br>
-            统计周期：2026-08-02 ~ 2026-09-02 | 报告生成时间：2026-09-02 09:01:39
+            统计周期：2026-08-03 ~ 2026-09-03 | 报告生成时间：2026-09-03 08:59:32
         </div>
     </div>
 
